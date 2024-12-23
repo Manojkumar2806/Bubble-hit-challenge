@@ -1,0 +1,210 @@
+.bg-container {
+    background: linear-gradient(45deg, white, skyblue, lightblue);
+    animation: gradientBG 15s ease infinite;
+    background-size: 200% 200%;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.main-container {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 1.25rem;
+    margin: 0.5rem;
+    border-radius: 1rem;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.head-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem;
+}
+
+.head-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.head-container p {
+    color: #ffffff;
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.head-container button {
+    width: 80px;
+    height: 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: linear-gradient(145deg, #FFD700, #FFA500);
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.result {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.head-container button:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(145deg, #FFA500, #FFD700);
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    width: 50px;
+    height: 50px;
+    border: none;
+    margin: 5px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    animation: bounceIn 0.5s;
+}
+
+#restarts {
+    padding: 8px;
+    font-size: 1.2rem;
+    background: linear-gradient(145deg, #FF6B6B, #EE5253);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    animation-delay: 1.5s;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+#restarts:hover {
+    transform: scale(1.05);
+    background: linear-gradient(145deg, #EE5253, #FF6B6B);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+
+@media (max-width: 400px) {
+    .head-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+
+    .head-container button {
+        width: 60px;
+        height: 35px;
+        font-size: 1rem;
+    }
+
+    .buttons {
+        min-width: 50px;
+        height: 50px;
+        font-size: 0.8rem;
+        margin: 0.1rem;
+    }
+
+    .overflow {
+        overflow-y: auto;
+        height: 50vh;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 600px) {
+    .head-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .overflow {
+        overflow-y: scroll;
+        height: 50vh;
+    }
+}
+
+@media (min-width: 601px) {
+    .head-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .main-container {
+        width: 80%;
+        padding-bottom: 20px;
+    }
+
+    .buttons {
+        width: 60px;
+        height: 60px;
+    }
+
+
+
+
+}
+
+
+
+#bubbles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h1 {
+    background: linear-gradient(to right, #00FF00, #00FFFF);
+    -webkit-background-clip: text;
+
+    font-family: 'Press Start 2P', cursive;
+    font-size: 40px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    font-weight: bold;
+}
